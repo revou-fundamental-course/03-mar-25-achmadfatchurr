@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <!-- Untuk Tampilan Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omke Gams</title>
+    <title>Homepage-Portofolio Fatchur</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css\style.css">
+
+    
 </head>
 <body>
+    
+    <!-- JS -->
+    <script src=""></script>
 
     <!-- Main Header -->
     <header class="main-header">
@@ -25,17 +30,75 @@
             <a href="#achievement">Achievement</a>
             <a href="#message-us">Message Us</a>
          </nav>
+
+         <!-- Menu Bar -->
+
+         <div class="menu-bar" onclick="openNav()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+         </div>
+
+         <!-- Side Menu -->
+         <div id="mysidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#search">Search</a>
+            <a href="#profile">Profile</a>
+            <a href="#settings">Settings</a>
+
+            <span onclick="openNav()">open</span>
+
+            <div id="main-bar">
+                 <!-- Menu Bar Content -->
+
+                <!-- Search Content -->
+                <section id="search">
+                     <header>
+                        <h1>Search</h1>
+                    </header>
+                    <div class="search-content" id="search-container">
+                        <input type="text" class="search-input" placeholder="Cari" id="search-container">
+                        <button class="search-button" onclick="searchFunction()">Search</button>
+                    </div>
+                </section>
+
+                <!-- Profile Content -->
+                <section id="profile">
+                     <header>
+                        <h1>Profile</h1>
+                    </header>
+
+                        <div class="profile-content">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </section>
+
+                 <!-- Settings Content -->
+
+                <section id="settings">
+                     <header>
+                        <h1>Settings</h1>
+                     </header>
+                         <div class="settings-content">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                </section>
+
+             </div>
+
+         </div>
     </header>
 
     <hr/>
 
     <!-- Main Content -->
     <main>
+
         <!-- Home Content -->
         <section id="home">
             <header>
-                <h1>Hi Selamat Datang to My Portofolio</h1>
-                <p></p>
+                <h1>Hi Selamat Datang di Web Saya</h1>
+                <p>Ini adalah web pertama saya</p>
             </header>
 
             <!-- Banner Autoslide -->
@@ -69,16 +132,58 @@
          </section>
 
         <!-- Message Us Content -->
-         <section id="message-us">
+        <section id="message-us">
             <header>
                 <h1>Message Us</h1>
             </header>
-
-            <!-- Message Us Content -->
-             <div class="message-us-content">
-                <p>Lorem ipsum dolor sit amet.</p>
-             </div>
-         </section>
+        
+            <div class="message-us-content">
+                <!-- Form Message Us -->
+                <div class="message-us-form">
+                    <form>
+                        <h3>Formulir</h3>
+                        
+                        <div class="form-group">
+                            <label for="nama">Nama :</label>
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan Nama" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tanggal">Tanggal Lahir :</label>
+                            <input type="date" id="tanggal" name="tanggal" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label>Jenis Kelamin :</label>
+                            <div class="radio-group">
+                                <input type="radio" id="laki" name="gender" value="Laki-Laki" required>
+                                <label for="laki">Laki-Laki</label>
+        
+                                <input type="radio" id="perempuan" name="gender" value="Perempuan">
+                                <label for="perempuan">Perempuan</label>
+                            </div>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="pesan">Pesan :</label>
+                            <textarea id="pesan" name="pesan" placeholder="Tulis pesan Anda..." required></textarea>
+                        </div>
+        
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+        
+                <!-- Kotak Hasil Input -->
+                <div class="result-box">
+                    <h3>Hasil Input</h3>
+                    <p><strong>Current Time:</strong> <span id="current-time">-</span></p>
+                    <p><strong>Nama:</strong> <span id="result-nama">-</span></p>
+                    <p><strong>Tanggal Lahir:</strong> <span id="result-tanggal">-</span></p>
+                    <p><strong>Jenis Kelamin:</strong> <span id="result-kelamin">-</span></p>
+                    <p><strong>Pesan:</strong> <span id="result-pesan">-</span></p>
+                </div>
+            </div>
+        </section>
     </main>
         
     <!-- Main Footer     -->
