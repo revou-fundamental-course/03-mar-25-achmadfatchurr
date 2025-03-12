@@ -15,7 +15,7 @@
 <body>
     
     <!-- JS -->
-    <script src=""></script>
+    <script src="js\script.js"></script>
 
     <!-- Main Header -->
     <header class="main-header">
@@ -30,66 +30,9 @@
             <a href="#achievement">Achievement</a>
             <a href="#message-us">Message Us</a>
          </nav>
-
-         <!-- Menu Bar -->
-
-         <div class="menu-bar" onclick="openNav()">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-         </div>
-
-         <!-- Side Menu -->
-         <div id="mysidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#search">Search</a>
-            <a href="#profile">Profile</a>
-            <a href="#settings">Settings</a>
-
-            <span onclick="openNav()">open</span>
-
-            <div id="main-bar">
-                 <!-- Menu Bar Content -->
-
-                <!-- Search Content -->
-                <section id="search">
-                     <header>
-                        <h1>Search</h1>
-                    </header>
-                    <div class="search-content" id="search-container">
-                        <input type="text" class="search-input" placeholder="Cari" id="search-container">
-                        <button class="search-button" onclick="searchFunction()">Search</button>
-                    </div>
-                </section>
-
-                <!-- Profile Content -->
-                <section id="profile">
-                     <header>
-                        <h1>Profile</h1>
-                    </header>
-
-                        <div class="profile-content">
-                            <p>Lorem ipsum dolor sit amet.</p>
-                        </div>
-                    </section>
-
-                 <!-- Settings Content -->
-
-                <section id="settings">
-                     <header>
-                        <h1>Settings</h1>
-                     </header>
-                         <div class="settings-content">
-                            <p>Lorem ipsum dolor sit amet.</p>
-                        </div>
-                </section>
-
-             </div>
-
-         </div>
     </header>
 
-    <hr/>
+    <hr style="border: 2px solid black;">
 
     <!-- Main Content -->
     <main>
@@ -97,15 +40,23 @@
         <!-- Home Content -->
         <section id="home">
             <header>
-                <h1>Hi Selamat Datang di Web Saya</h1>
+                <h1>Hi Selamat Datang <span>-</span>di Web Saya</h1>
                 <p>Ini adalah web pertama saya</p>
             </header>
 
             <!-- Banner Autoslide -->
-            <div class="banner-img"></div>
+            <div class="banner-img">
+                <button id="prevBtn" onclick="plusDivs(-1)"></button>
+                <div class="slide">
+                    <img src="assets\banner1.jpg" alt="hutan">
+                    <img src="assets\banner2.jpg" alt="salju">
+                    <img src="assets\banner3.jpg" alt="gunung">
+                </div>
+                <button id="nextBtn" onclick="plusDivs(1)"></button>
+            </div>
         </section>
 
-        <hr/>
+        <hr style="border: 2px solid black;">
 
         <!-- Our Profile Content -->
          <section id="our-profile">
@@ -115,9 +66,30 @@
 
             <!-- Our Profile Content -->
             <div class="our-profile-content">
-                <p>Lorem ipsum dolor sit amet.</p>
+                <!-- Profile Saya -->
+                 <div class="profile-card">
+                    <div class="profile-img"></div> <!--Gambar Profile-->
+                    <div class="profile-text">
+                        <span>Last Education</span> <!--Informasi Pendidikan-->
+                    </div>
+                 </div>
+
+                 <div class="profile-card">
+                    <div class="profile-img"></div>
+                    <div class="profile-text">
+                        <span>Organization History</span> <!--Informasi Riwayat Organisasi-->
+                    </div>
+
+                 </div> <div class="profile-card">
+                    <div class="profile-img"></div>
+                    <div class="profile-text">
+                        <span>Hobby</span>
+                    </div>
+                 </div>
             </div>
          </section>
+
+        <hr style="border: 2px solid black;">
 
         <!-- Achievement Content -->
          <section id="achievement">
@@ -131,6 +103,8 @@
             </div>
          </section>
 
+        <hr style="border: 2px solid black;">
+
         <!-- Message Us Content -->
         <section id="message-us">
             <header>
@@ -140,7 +114,7 @@
             <div class="message-us-content">
                 <!-- Form Message Us -->
                 <div class="message-us-form">
-                    <form>
+                    <form name="fill-form" onsubmit="return validateform()">
                         <h3>Formulir</h3>
                         
                         <div class="form-group">
