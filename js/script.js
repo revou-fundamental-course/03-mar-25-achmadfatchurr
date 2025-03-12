@@ -1,7 +1,5 @@
 // // Ini file javascript
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
     let slideIndex = 0;
     const slides = document.querySelectorAll(".slide img");
@@ -40,10 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Menampilkan slide pertama saat halaman dimuat
     showSlides(slideIndex);
 });
-
-
-
-
 
 
 // Menunggu hingga DOM selesai dimuat sebelum menjalankan skrip
@@ -103,3 +97,44 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("result-pesan").textContent = document.getElementById("pesan").value;
     });
 });
+
+
+
+// let bannerIndex = 0;
+// showBanner();
+
+// // Fungsi untuk merubah banner
+
+// function nextBanner() {
+//     bannerIndex += 1;
+//     showBanner();
+// }
+
+// function previousBanner() {
+//     bannerIndex -= 1;
+//     showBanner();
+// }
+
+// function showBanner() {
+//     const banners = document.getElementsByClassName("slide");
+
+//     if (bannerIndex>= banner.length){
+//         bannerIndex = 0;
+//     }
+    
+//     // Looping Semua Banner
+    
+//     for (let i = 0; i < banner.length;) {
+//         banners[i].style.display = "none";
+//     }
+    
+//     // Menampilkan Banner Pertama
+    
+//     banners[bannerIndex].style.display = "block";
+// }
+
+// // Auto Slide Banner Setiap 3 Detik
+
+// setInterval(nextBanner,3000)
+
+

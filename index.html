@@ -14,9 +14,6 @@
 </head>
 <body>
     
-    <!-- JS -->
-    <script src="js\script.js"></script>
-
     <!-- Main Header -->
     <header class="main-header">
         
@@ -46,13 +43,13 @@
 
             <!-- Banner Autoslide -->
             <div class="banner-img">
-                <button id="prevBtn" onclick="plusDivs(-1)"></button>
+                <button id="prevBtn" onclick="prevBanner()"></button>
                 <div class="slide">
                     <img src="assets\banner1.jpg" alt="hutan">
                     <img src="assets\banner2.jpg" alt="salju">
                     <img src="assets\banner3.jpg" alt="gunung">
                 </div>
-                <button id="nextBtn" onclick="plusDivs(1)"></button>
+                <button id="nextBtn" onclick="nextBanner()"></button>
             </div>
         </section>
 
@@ -164,6 +161,10 @@
     <footer>
         <p>&copy; 2025 Portofolio Fatchur</p>
     </footer>
+
+    <!-- JS -->
+    <script src="js\script.js"></script>
+    
 
 </body>
 </html>
