@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll(".slide img");
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
+    
+    
 
     function showSlides(n) {
         slides.forEach((slide, index) => {
@@ -18,17 +20,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     //Memastikan tombol ada sebelum menambahkan event listener
-    if (prevBtn) {
-        prevBtn.addEventListener("click", function () {
-            plusDivs(-1);
-        });
-    }
+    document.getElementById("prevBtn").addEventListener("click", function () {
+    plusDivs(-1);
+    });
 
-    if (nextBtn) {
-        nextBtn.addEventListener("click", function () {
-            plusDivs(1);
-        });
-    }
+    document.getElementById("nextBtn").addEventListener("click", function () {
+    plusDivs(1);
+    });
+
 
     // Auto-slide setiap 3 detik
     setInterval(function () {
@@ -38,6 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Menampilkan slide pertama saat halaman dimuat
     showSlides(slideIndex);
 });
+
+function showInfo(type){
+    let info = {
+        "Last Education": "Bachelor's Degree in Electrical Engineer",
+    }
+}
 
 
 // Menunggu hingga DOM selesai dimuat sebelum menjalankan skrip
@@ -81,13 +86,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // Mengambil nilai dari input nama
         let nama = document.getElementById("nama").value;
 
-        // Mengubah teks pada header selamat datang (di bagian home)
-        let headerNama = document.querySelector("#home h1 span");
-        if (nama.trim() !== "") {
-            headerNama.textContent = nama + " "; // Jika nama diisi, tampilkan di header
-        } else {
-            headerNama.textContent = "- "; // Jika kosong, tampilkan tanda "-"
-        }
 
         // Menampilkan hasil input pada kotak hasil (tampilan hasil input pengguna)
         document.getElementById("current-time").textContent = new Date().toLocaleString();
@@ -98,43 +96,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Fungsi untuk meminta nama dari pengguna
+function askName() {
+    let nama = prompt("Please input your name:");
+
+    // Menemukan elemen span di dalam #home h1
+    let headerNama = document.querySelector("#home h1 span");
+
+    // Jika pengguna mengisi nama, tampilkan di header
+    if (nama !== null && nama.trim() !== "") {
+        headerNama.textContent = nama + " ";
+    } else {
+        headerNama.textContent = "- ";
+    }
+}
+
+// Panggil fungsi saat halaman dimuat
+window.onload = askName;
 
 
-// let bannerIndex = 0;
-// showBanner();
-
-// // Fungsi untuk merubah banner
-
-// function nextBanner() {
-//     bannerIndex += 1;
-//     showBanner();
-// }
-
-// function previousBanner() {
-//     bannerIndex -= 1;
-//     showBanner();
-// }
-
-// function showBanner() {
-//     const banners = document.getElementsByClassName("slide");
-
-//     if (bannerIndex>= banner.length){
-//         bannerIndex = 0;
-//     }
-    
-//     // Looping Semua Banner
-    
-//     for (let i = 0; i < banner.length;) {
-//         banners[i].style.display = "none";
-//     }
-    
-//     // Menampilkan Banner Pertama
-    
-//     banners[bannerIndex].style.display = "block";
-// }
-
-// // Auto Slide Banner Setiap 3 Detik
-
-// setInterval(nextBanner,3000)
 
 

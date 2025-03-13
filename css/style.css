@@ -128,6 +128,23 @@ nav>a {
     height: 500px;
     align-content: center;
     text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    color: #333;
+
+}
+
+.achievement-content:hover{
+    background: linear-gradient(135deg, #e9ecef, #dee2e6);
+    transition: 0.3s ease-in-out;
 }
 
 /* Styling untuk section "Message Us" */
@@ -204,27 +221,6 @@ button:hover {
 
 .result-box h3 {
     margin-bottom: 10px;
-}
-
-.search-content {
-    border: 1px solid;
-    height: 500px;
-    align-content: center;
-    text-align: center;
-}
-
-.profile-content {
-    border: 1px solid;
-    height: 500px;
-    align-content: center;
-    text-align: center;
-}
-
-.settings-content {
-    border: 1px solid;
-    height: 500px;
-    align-content: center;
-    text-align: center;
 }
 
 /* mobile */
